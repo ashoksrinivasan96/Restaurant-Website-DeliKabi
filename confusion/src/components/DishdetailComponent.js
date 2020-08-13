@@ -67,7 +67,7 @@ class DishDetail extends Component {
 
             <div className="container">
                 <div>
-                    {this.renderDishAndComments(this.props.dishSelected)}
+                    {this.renderDishAndComments(this.props.dish)}
                 </div>
 
 
