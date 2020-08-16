@@ -12,6 +12,7 @@ import Home from './HomeComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
+import {IMAGES} from '../shared/images';
 
 
 
@@ -23,7 +24,8 @@ class Main extends Component {
             dishes: DISHES,
             promotions: PROMOTIONS,
             comments: COMMENTS,
-            leaders: LEADERS
+            leaders: LEADERS,
+            images: IMAGES
 
         }
 
@@ -51,7 +53,7 @@ render() {
     }
     return (
         <div>
-            <Header />
+            <Header images={this.state.images} />
             <Switch>
                 <Route path="/home" component={HomePage} />
                 <Route exact path="/menu" component={() => <Menu dishes={this.state.dishes} />} />
