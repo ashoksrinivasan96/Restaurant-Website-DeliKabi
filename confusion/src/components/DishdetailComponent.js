@@ -21,8 +21,8 @@ class CommentForm extends Component {
       }
 
       handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
+        this.toggleModal();
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
        
     }
     render() {
@@ -95,7 +95,7 @@ class CommentForm extends Component {
 
 
     //Combined renderDish and renderComment methods into single method
-    function RenderDishAndComments({dish, comments}) {
+    function RenderDishAndComments({dish, comments, addComment, dishId}) {
        //Checking if the value of the parameter passed is null or not. If null, return empty view
         if (dish != null && comments != null) {
             const displayComments =comments.map((cmt) => {
@@ -129,7 +129,7 @@ class CommentForm extends Component {
                     <div className="col-12 col-md-5 col-xl-5 col-lg-5 m-1">
                         <h4>Comments</h4>
                         {displayComments}
-                        {<CommentForm/>}
+                        {<CommentForm dishId={dishId} addComment={addComment}/>}
                     </div>
                 </div>
 
@@ -160,7 +160,9 @@ class CommentForm extends Component {
                         </div>
                     </div>
                     <div>
-                        <RenderDishAndComments dish = {props.dish} comments = {props.comments}/>
+                        <RenderDishAndComments dish = {props.dish} comments = {props.comments}
+                         addComment={props.addComment}
+                         dishId={props.dish.id}/>
                     </div>
     
     
