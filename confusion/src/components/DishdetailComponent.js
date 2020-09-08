@@ -3,6 +3,7 @@ import { Button, Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, M
 import {Link} from 'react-router-dom';
 import {Control, LocalForm, Errors} from 'react-redux-form'
 import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
 
 class CommentForm extends Component {
@@ -114,7 +115,7 @@ class CommentForm extends Component {
                      {/*returning view with the selected image and the corresponding comments*/}
                     <div className="col-12 col-md-5 col-xl-5 col-lg-5 m-1">
                         <Card>
-                            <CardImg width="100%" src={dish.image} alt={dish.name} />
+                        <CardImg top src={baseUrl + dish.image} alt={dish.name} />
                             <CardBody>
                                 <CardTitle>
                                     <b>{dish.name}</b>
