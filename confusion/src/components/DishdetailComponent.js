@@ -24,7 +24,7 @@ class CommentForm extends Component {
 
       handleSubmit(values) {
         this.toggleModal();
-        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
+        this.props.postComment(this.props.dishId, values.rating, values.author, values.comment);
        
     }
     render() {
@@ -97,7 +97,7 @@ class CommentForm extends Component {
 
 
     //Combined renderDish and renderComment methods into single method
-    function RenderDishAndComments({dish, comments, addComment, dishId}) {
+    function RenderDishAndComments({dish, comments,dishId, postComment}) {
        //Checking if the value of the parameter passed is null or not. If null, return empty view
         if (dish != null && comments != null) {
             const displayComments =comments.map((cmt) => {
@@ -131,7 +131,8 @@ class CommentForm extends Component {
                     <div className="col-12 col-md-5 col-xl-5 col-lg-5 m-1">
                         <h4>Comments</h4>
                         {displayComments}
-                        {<CommentForm dishId={dishId} addComment={addComment}/>}
+                       
+                        <CommentForm dishId={dishId} postComment={postComment} />
                     </div>
                 </div>
 
@@ -182,8 +183,10 @@ class CommentForm extends Component {
                     </div>
                     <div>
                         <RenderDishAndComments dish = {props.dish} comments = {props.comments}
-                         addComment={props.addComment}
-                         dishId={props.dish.id}/>
+                         postComment={props.postComment}
+                         dishId={props.dish.id}
+                         />
+                         
                     </div>
     
     
