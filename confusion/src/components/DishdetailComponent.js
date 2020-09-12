@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {Control, LocalForm, Errors} from 'react-redux-form'
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 
 class CommentForm extends Component {
@@ -114,23 +115,28 @@ class CommentForm extends Component {
                 <div className="row">
                      {/*returning view with the selected image and the corresponding comments*/}
                     <div className="col-12 col-md-5 col-xl-5 col-lg-5 m-1">
-                        <Card>
-                        <CardImg top src={baseUrl + dish.image} alt={dish.name} />
-                            <CardBody>
-                                <CardTitle>
-                                    <b>{dish.name}</b>
-                                </CardTitle>
-                                <CardText>
-                                    {dish.description}
-                                </CardText>
-                            </CardBody>
-
-
-                        </Card>
+                       <FadeTransform
+                in
+                transformProps={{
+                    exitTransform: 'scale(0.5) translateY(-50%)'
+                }}>
+            <Card>
+                <CardImg top src={baseUrl + dish.image} alt={dish.name} />
+                <CardBody>
+                    <CardTitle>{dish.name}</CardTitle>
+                    <CardText>{dish.description}</CardText>
+                </CardBody>
+            </Card>
+            </FadeTransform>
                     </div>
                     <div className="col-12 col-md-5 col-xl-5 col-lg-5 m-1">
                         <h4>Comments</h4>
-                        {displayComments}
+                       <Stagger in>
+                           <Fade>
+                              {displayComments}
+                           </Fade>
+                       </Stagger>
+                      
                        
                         <CommentForm dishId={dishId} postComment={postComment} />
                     </div>
