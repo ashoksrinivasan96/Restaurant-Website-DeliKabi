@@ -116,4 +116,23 @@ body {
 
 .navbar-nav {
   margin-left:20px;
+  font-weight: bold;
+  padding: 5px;
+  
+}
+
+.btn:hover {
+  background-color: orangered;
+  color:white;
+}
+.nav-item:hover {
+  
+  background-color:orangered;
+  
+  
+}
+
+#root {
+  max-width: 2000px;
+  margin:auto;
 }
