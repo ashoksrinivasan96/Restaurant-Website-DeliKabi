@@ -38,7 +38,7 @@ class Header extends Component {
     render() {
        
         return (
-            <>
+            <React.Fragment>
                 <Navbar  dark expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav}/>
@@ -80,8 +80,9 @@ class Header extends Component {
                     <div className="container">
                         <div className = "row   row-header">
                             <div className="col-12 col-sm-6">
-                                <h1>Ristorante Con Fusion</h1>
-                                <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                                <h1>Exotic DeliKabi</h1>
+                                <p>Are you looking for something that will satisfy your tongue? Are you bored of eating the same old stuff? Does your tummy often remain upset about the food that you gulp down?</p>
+                                <p>At Exotic DeliKabi, we prepare rare delicacies according to your preference that too at a very affordable price!</p>
                             </div>
                         </div>
                     </div>
@@ -113,7 +114,7 @@ class Header extends Component {
                     
                     </ModalBody>
                 </Modal>
-            </>
+            </React.Fragment>
         );
     };
 }
