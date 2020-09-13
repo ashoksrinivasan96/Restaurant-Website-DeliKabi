@@ -32,7 +32,7 @@ function Footer(props){
                         <a className="btn btn-social-icon btn-github link-styling" href="https://github.com/ashoksrinivasan96"><i className="fa fa-github"></i></a>
                         <a className="btn btn-social-icon btn-facebook link-styling" href="https://www.facebook.com/PingyPinkyPiggy/"><i className="fa fa-facebook"></i></a>
                         <a className="btn btn-social-icon btn-linkedin link-styling" href="https://www.linkedin.com/in/ashok-srinivasan-g/"><i className="fa fa-linkedin"></i></a>
-                        <a className="btn btn-social-icon link-styling" href="mailto:"><i className="fa fa-envelope-o"></i></a>
+                       
                     </div>
                 </div>
             </div>

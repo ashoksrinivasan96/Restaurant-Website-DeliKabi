@@ -23,11 +23,11 @@ function RenderCard({item, isLoading, errMess}) {
                 transformProps={{
                     exitTransform: 'scale(0.5) translateY(-50%)'
                 }}>
-                <Card className="featuredhome">
+                <Card>
                     <CardImg src={baseUrl + item.image} alt={item.name} />
                     <CardBody>
-                    <CardTitle>{item.name}</CardTitle>
-                    {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null }
+                    <CardTitle><b><h4>{item.name}</h4></b></CardTitle>
+                    {/* {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null } */}
                     <CardText>{item.description}</CardText>
                     </CardBody>
                 </Card>
@@ -40,7 +40,7 @@ function Home(props) {
 
     return (
         <div className="container">
-            <div className ="row align-item-start">
+            <div className ="row align-item-start homepictures">
                 <div className="col-12 col-md m-1">
                     <RenderCard item = {props.dish} isLoading={props.dishesLoading} errMess={props.dishErrMess}/>
                 </div>

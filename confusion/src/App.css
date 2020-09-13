@@ -1,6 +1,7 @@
 .row-header{
   margin:0px auto;
   padding:0px auto;
+  
 }
 
 .row-content {
@@ -11,7 +12,7 @@
 }
 
 .footer{
-  background-color: #222222;
+  background-color: #161616;
   margin:0px auto;
   padding: 20px 0px 20px 0px;
 }
@@ -31,7 +32,8 @@ address{
 }
 
 .navbar-dark {
-  background-color: #222222;
+  background-color:  #161616;
+
 }
 
 
@@ -83,4 +85,35 @@ a {
 .card-img{
   height: 300px;
   object-fit: cover;
+ 
+
+}
+
+body {
+color:#222222;
+}
+
+.homepictures {
+  margin:30px;
+}
+
+body {
+  background-color: #222222;
+}
+
+.card-body {
+  background-color: #2c2c2c;
+  color:white;
+  border: none;
+}
+
+.card {
+  border:none;
+  box-shadow: 4px 4px 8px #161616;
+  min-height: 525px;
+
+}
+
+.navbar-nav {
+  margin-left:20px;
 }
