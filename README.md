@@ -21,9 +21,63 @@ React, Redux, JSX, HTML, CSS, Javascript, JSON
 * Executes the requirements of a restaurant
 
 ## Code Example
-to be added
+Function to Render dish and comments on the Menu page
 
-##Link to the website
+    function RenderDishAndComments({dish, comments,dishId, postComment}) {
+       //Checking if the value of the parameter passed is null or not. If null, return empty view
+        if (dish != null && comments != null) {
+            const displayComments =comments.map((cmt) => {
+                return (
+                    <ListGroup key={cmt.id}>
+                        {/* Converting date to the required format using toDateString()*/}
+                        <ListGroupItem>{cmt.comment}<br></br> --{cmt.author}, {new Intl.DateTimeFormat('en-US', {year:'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(cmt.date)))}</ListGroupItem>
+
+                    </ListGroup>
+                );
+            });
+            return (
+               
+                <div className="row">
+                     {/*returning view with the selected image and the corresponding comments*/}
+                    <div className="col-12 col-md-5 col-xl-5 col-lg-5 m-1">
+                       <FadeTransform
+                in
+                transformProps={{
+                    exitTransform: 'scale(0.5) translateY(-50%)'
+                }}>
+            <Card>
+                <CardImg top src={baseUrl + dish.image} alt={dish.name} />
+                <CardBody>
+                    <CardTitle>{dish.name}</CardTitle>
+                    <CardText>{dish.description}</CardText>
+                </CardBody>
+            </Card>
+            </FadeTransform>
+                    </div>
+                    <div className="col-12 col-md-5 col-xl-5 col-lg-5 m-1">
+                        <h4>Comments</h4>
+                       <Stagger in>
+                           <Fade>
+                              {displayComments}
+                           </Fade>
+                       </Stagger>
+                      
+                       
+                        <CommentForm dishId={dishId} postComment={postComment} />
+                    </div>
+                </div>
+
+            );
+
+        }
+        else {
+            return (
+                <div></div>
+            );
+        }
+    }
+
+## Link to the website
 Find the website [here](https://exoticdelikabi.herokuapp.com/home)
 
 ## Credits
