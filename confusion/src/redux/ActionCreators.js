@@ -184,8 +184,8 @@ export const addLeaders = (leaders) => ({
 export const postFeedback = (feedback) => (dispatch) => {
         
     return fetch(baseUrl+'feedback')
-    .then(response => { console.log('Feedback', response); alert('Thank you for your feedback!'); })
-    .catch(error =>  { console.log('Feedback', error.message); alert('Your feedback could not be posted\nError: '+error.message); });
+    .then(response => { console.log('Feedback', response); })
+    .catch(error =>  { console.log('Feedback', error.message); });
 };
 
 

@@ -14,8 +14,8 @@ import { baseUrl } from '../shared/baseUrl';
 
             <CardImgOverlay>
                 <CardTitle>
-                    {dish.name}
-                   
+                 
+                   {dish.name}
                 </CardTitle>
 
             </CardImgOverlay>
@@ -60,7 +60,7 @@ import { baseUrl } from '../shared/baseUrl';
         );
        
         return (
-            <div className="container">
+            <div className="container homepictures">
                 <div className="row">
                     <Breadcrumb>
                         <BreadcrumbItem><Link to='/home'>Home </Link></BreadcrumbItem>

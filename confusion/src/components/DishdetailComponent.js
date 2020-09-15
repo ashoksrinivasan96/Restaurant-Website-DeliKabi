@@ -131,6 +131,7 @@ class CommentForm extends Component {
                     </div>
                     <div className="col-12 col-md-5 col-xl-5 col-lg-5 m-1">
                         <h4>Comments</h4>
+                        <div className="comments">
                        <Stagger in>
                            <Fade>
                               {displayComments}
@@ -139,6 +140,7 @@ class CommentForm extends Component {
                       
                        
                         <CommentForm dishId={dishId} postComment={postComment} />
+                        </div>
                     </div>
                 </div>
 
