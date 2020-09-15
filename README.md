@@ -7,7 +7,15 @@ I started out with a very basic idea of making a website for a restaurant owner.
 It taught me several concepts as well as perseverance to actually close a project properly 😀
 
 ## Screenshots
-to be added
+
+### Mobile screen
+<img src="assets/mobile.png" width="170px" height="300px">
+
+### Tab screen
+<img src="assets/tab.png" width="240px" height="300px">
+
+### Web screen
+<img src="assets/web.png" width="300px" height="300px">
 
 
 ## Tech/Frameworks Used
