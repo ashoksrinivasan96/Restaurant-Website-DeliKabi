@@ -151,9 +151,11 @@ body {
 }
 
 .leaderimage {
-  max-height: 105px;
-  min-width: 105px;
+  max-height: 200px;
+  min-width: 200px;
   object-fit: cover;
+  margin-bottom: 30px;
+  margin-top:10px;
 }
 
 .btn-primary:hover{
@@ -164,4 +166,7 @@ body {
   color: orangered;
   border: 3px solid orangered;
   background-color:#222222;
+  margin-top:30px;
 }
+
+
