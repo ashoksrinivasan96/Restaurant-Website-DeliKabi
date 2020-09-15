@@ -88,7 +88,7 @@ Function to Render dish and comments on the Menu page
     }
 
 ## Link to the website
-Find the website [here](https://exoticdelikabi.herokuapp.com/home)
+Find the website [here](https://delikabiexotic.herokuapp.com/home)
 
 ## Credits
 **©Ashok Srinivasan| 2020**
