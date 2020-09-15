@@ -14,9 +14,11 @@ It taught me several concepts as well as perseverance to actually close a projec
 ### Tab screen
 <img src="assets/tab.png" width="240px" height="300px">
 
-### Web screen
+### Web screens
 <img src="assets/web.png" width="300px" height="300px">
-
+<img src="assets/01.png" width="200px" height="300px">
+<img src="assets/02.png" width="280px" height="300px">
+<img src="assets/03.png" width="280px" height="300px">
 
 ## Tech/Frameworks Used
 React, Redux, JSX, HTML, CSS, Javascript, JSON
