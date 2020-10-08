@@ -6,6 +6,11 @@ This project is a take on restaurant websites and my version of a perfect portfo
 I started out with a very basic idea of making a website for a restaurant owner. The progress was spread through weeks and turned out to be pretty challenging.
 It taught me several concepts as well as perseverance to actually close a project properly 😀
 
+### Installation
+1. Clone or fork the repository
+2. npm install
+3. npm start
+
 ## Screenshots
 
 ### Mobile screen
